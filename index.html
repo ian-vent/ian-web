@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이안벤처스 - 혁신적인 비즈니스 솔루션</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">이안벤처스</a></div>
+            <div class="nav-links">
+                <a href="company.html">회사 소개</a>
+                <a href="business.html">사업 영역</a>
+                <a href="partners.html">주요 거래처</a>
+                <a href="contact.html">연락처</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="slider">
+            <div class="slider-container">
+                <div class="slide active">
+                    <img src="images/slide1.jpg" alt="이안벤처스 비전">
+                    <div class="slide-content">
+                        <h2>혁신적인 비즈니스 솔루션</h2>
+                        <p>미래를 선도하는 기업</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/slide2.jpg" alt="이안벤처스 서비스">
+                    <div class="slide-content">
+                        <h2>전문적인 컨설팅</h2>
+                        <p>최고의 전문가와 함께하는 성장</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/slide3.jpg" alt="이안벤처스 파트너십">
+                    <div class="slide-content">
+                        <h2>글로벌 파트너십</h2>
+                        <p>세계와 함께하는 비즈니스</p>
+                    </div>
+                </div>
+            </div>
+            <button class="slider-btn prev">&#10094;</button>
+            <button class="slider-btn next">&#10095;</button>
+        </section>
+
+        <section id="company" class="company-intro">
+            <h2>우리는 이안벤처스입니다</h2>
+            <p>2025년 설립된 이안벤처스는 혁신적인 비즈니스 솔루션을 제공하는 기업입니다.<br>
+            우리는 고객의 성공을 위해 최선을 다하며, 지속 가능한 성장을 추구합니다.</p>
+        </section>
+
+        <section id="business" class="business-areas">
+            <div class="service-card">
+                <h3>비즈니스 컨설팅</h3>
+                <p>전문적인 컨설팅 서비스를 통해 기업의 성장을 지원합니다.</p>
+            </div>
+            <div class="service-card">
+                <h3>디지털 트랜스포메이션</h3>
+                <p>최신 기술을 활용한 디지털 혁신 솔루션을 제공합니다.</p>
+            </div>
+            <div class="service-card">
+                <h3>인재 육성</h3>
+                <p>기업의 핵심 인재를 육성하고 성장시키는 프로그램을 운영합니다.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-row">
+                <p>주식회사 이안벤처스</p>
+                <p>사업자등록번호 : 492-86-03535</p>
+            </div>
+            <div class="footer-row">
+                <p>주소 : 서울시 강서구 백범로 199, 22층 2208호</p>
+                <p>연락처 : 010-2178-1044</p>
+                <p>이메일 : contact@ianventures.net</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 이미지 슬라이더 기능
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+        nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+
+        // 자동 슬라이드
+        setInterval(() => showSlide(currentSlide + 1), 5000);
+    </script>
+</body>
+</html>
