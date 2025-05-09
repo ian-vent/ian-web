@@ -8,6 +8,9 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1.6;
     color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header & Navigation */
@@ -27,12 +30,13 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #2ecc71;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: #2c3e50;
+    color: #fff;
 }
 
 .logo a {
@@ -42,7 +46,7 @@ nav {
 }
 
 .logo a:hover {
-    color: #3498db;
+    color: #27ae60;
 }
 
 .nav-links {
@@ -52,18 +56,19 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #2c3e50;
+    color: #fff;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #3498db;
+    color: #27ae60;
 }
 
 /* Main Content */
 main {
     margin-top: 80px;
+    flex: 1;
 }
 
 section {
@@ -355,10 +360,10 @@ button:hover {
 
 /* Footer */
 footer {
-    background-color: #2c3e50;
-    color: white;
+    background-color: #2ecc71;
+    color: #fff;
     padding: 2rem 0;
-    margin-top: 4rem;
+    margin-top: auto;
 }
 
 .footer-content {
@@ -371,12 +376,11 @@ footer {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
-    flex-wrap: wrap;
-    gap: 1rem;
 }
 
 .footer-row p {
-    margin: 0;
+    color: #fff;
+    margin: 0.5rem 0;
 }
 
 @media (max-width: 768px) {
