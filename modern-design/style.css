@@ -541,4 +541,50 @@ footer {
     font-size: 1.2rem;
     color: #666;
     line-height: 1.8;
+}
+
+/* Highlight Letters */
+.highlight-letter {
+    color: var(--primary-color);
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    animation: highlightPulse 2s infinite;
+}
+
+.highlight-letter::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    animation: underlineSlide 2s infinite;
+}
+
+@keyframes highlightPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes underlineSlide {
+    0% {
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+    50% {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    100% {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
 } 
