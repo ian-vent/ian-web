@@ -587,4 +587,12 @@ footer {
         transform: scaleX(0);
         transform-origin: left;
     }
+}
+
+/* Green Text with Underline */
+.green-text {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
 } 
