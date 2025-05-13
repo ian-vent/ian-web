@@ -502,4 +502,30 @@ footer {
 .info-item p {
     color: var(--text-color);
     line-height: 1.6;
+}
+
+/* Company Overview Section */
+.company-overview {
+    margin-bottom: 4rem;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.company-overview .intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.company-overview .intro-content h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    color: var(--text-color);
+}
+
+.company-overview .intro-content p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.8;
 } 
