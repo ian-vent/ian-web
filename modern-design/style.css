@@ -80,8 +80,8 @@ nav {
     color: var(--primary-color);
 }
 
-/* Hero Section */
-.hero {
+/* Main Section */
+.ian-main {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -91,20 +91,20 @@ nav {
     color: #fff;
 }
 
-.hero-content {
+.ian-maincontent {
     text-align: center;
     max-width: 800px;
     padding: 0 2rem;
 }
 
-.hero h1 {
+.ian-main h1 {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
 }
 
-.hero p {
+.ian-main p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
 }
@@ -149,10 +149,11 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    margin: 4rem 0;
+    margin: 8rem 0;
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.8s ease;
+    visibility: hidden;
 }
 
 .feature-introduce {
@@ -178,6 +179,7 @@ nav {
 .features.visible {
     opacity: 1;
     transform: translateY(0);
+    visibility: visible;
 }
 
 .feature-card {
@@ -217,7 +219,11 @@ nav {
 
 /* Company Intro Section */
 .company-intro {
-    margin-bottom: 4rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.8s ease;
@@ -232,12 +238,19 @@ nav {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    padding: 0 2rem;
 }
 
 .intro-content h2 {
     font-size: 3rem;
     margin-bottom: 2rem;
     line-height: 1.2;
+}
+
+.intro-content p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #666;
 }
 
 /* Section Divider */
@@ -309,7 +322,7 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero h1 {
+    .ian-main h1 {
         font-size: 2.5rem;
     }
     
