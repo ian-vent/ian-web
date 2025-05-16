@@ -166,46 +166,72 @@ nav {
 .content-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
     background: var(--background-color);
     border-radius: 2rem 2rem 0 0;
-    margin-top: -2rem;
+    margin-top: -4rem;
     position: relative;
     z-index: 1;
 }
 
 /* Features Section */
 .features {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    margin: 8rem 0;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1.2s ease-in-out, transform 1.2s ease-out, visibility 0s 1.2s;
-    visibility: hidden;
-    will-change: opacity, transform;
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
 }
 
 .feature-introduce {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    overflow: hidden;
 }
 
-.feature-introduce h2 {
-    font-size: 2.5rem;
-    color: var(--text-color);
-    margin-bottom: 1rem;
-    line-height: 1.3;
+.feature-introduce-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/nature-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.1);
+    transition: transform 1.5s ease-out;
 }
 
-.feature-introduce p {
+.feature-introduce-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.feature-introduce-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-introduce-content p {
     font-size: 1.2rem;
-    color: #666;
     line-height: 1.8;
+}
+
+.feature-items-container {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.feature-items-container.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .features.visible {
@@ -396,7 +422,7 @@ nav {
     }
     
     .feature-content p {
-        font-size: 1rem;
+        font-size: 0.8rem;
         line-height: 1.4;
     }
 }
@@ -410,7 +436,7 @@ nav {
     margin-bottom: 0;
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.8s ease;
+    transition: all 0.6s ease;
 }
 
 .company-intro.visible {
@@ -615,6 +641,22 @@ footer {
     .ian-main h1 {
         font-size: 2.5rem;
     }
+
+    .intro-content h2 {
+        font-size: 2rem;
+    }
+
+    .intro-content p {
+        font-size: 1rem;
+    }
+
+    .feature-introduce-content h2 {
+        font-size: 2rem;
+    }
+
+    .feature-introduce-content p {
+        font-size: 1rem;
+    }
     
     .features {
         grid-template-columns: 1fr;
@@ -622,6 +664,161 @@ footer {
     
     .stats {
         grid-template-columns: 1fr;
+    }
+
+    /* Common page styles for tablet */
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-header p {
+        font-size: 0.9rem;
+    }
+
+    .page-section h2 {
+        font-size: 2rem;
+    }
+
+    .page-section p {
+        font-size: 1rem;
+    }
+
+    .value-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .value-card p {
+        font-size: 1rem;
+    }
+
+    .business-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .business-card p {
+        font-size: 1rem;
+    }
+
+    .info-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .info-item p {
+        font-size: 1rem;
+    }
+
+    .company-overview .intro-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .company-overview .intro-content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ian-main h1 {
+        font-size: 2rem;
+    }
+
+    .intro-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .intro-content p {
+        font-size: 0.8rem;
+    }
+
+    .feature-introduce-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .feature-introduce-content p {
+        font-size: 0.8rem;
+    }
+    
+    .feature-item {
+        min-height: 50vh;
+    }
+    
+    .feature-content {
+        padding: 1.5rem;
+    }
+    
+    .feature-content h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .feature-content p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    /* Footer mobile styles */
+    .footer-content {
+        font-size: 0.8em;  /* 전체 푸터 컨텐츠의 글자 크기를 80%로 설정 */
+    }
+
+    .footer-row p {
+        font-size: 0.8rem;
+    }
+
+    .copyright p {
+        font-size: 0.8rem;
+    }
+
+    /* Common page styles for mobile */
+    .page-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .page-header p {
+        font-size: 0.7rem;
+    }
+
+    .page-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .page-section p {
+        font-size: 0.8rem;
+    }
+
+    .value-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .value-card p {
+        font-size: 0.8rem;
+    }
+
+    .business-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .business-card p {
+        font-size: 0.8rem;
+    }
+
+    .info-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .info-item p {
+        font-size: 0.8rem;
+    }
+
+    .feature-list li {
+        font-size: 0.8rem;
+    }
+
+    .company-overview .intro-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .company-overview .intro-content p {
+        font-size: 0.7rem;
     }
 }
 

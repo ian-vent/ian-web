@@ -7,6 +7,9 @@ const introContent = document.querySelector('.intro-content');
 const features = document.querySelector('.features');
 const featureItems = document.querySelectorAll('.feature-item');
 const featureIntroduce = document.querySelector('.feature-introduce');
+const featureItemsContainer = document.querySelector('.feature-items-container');
+const featureIntroduceContent = document.querySelector('.feature-introduce-content');
+const featureIntroduceBg = document.querySelector('.feature-introduce-bg');
 let lastScroll = 0;
 let scrollDirection = 'down';
 
@@ -57,7 +60,7 @@ window.addEventListener('scroll', () => {
                 content.classList.add('visible');
                 
                 // Company intro 먼저 표시
-                if (contentProgress > 0.2) {
+                if (contentProgress > 0.1) {
                     companyIntro.classList.add('visible');
                 }
                 
@@ -232,4 +235,25 @@ document.addEventListener('click', (e) => {
         mobileMenu.classList.remove('active');
         document.body.style.overflow = '';
     }
-}); 
+});
+
+// Feature section scroll animation
+function handleFeatureScroll() {
+    const rect = featureIntroduce.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    
+    // Show feature introduce content when it's in view
+    if (rect.top < windowHeight * 0.8) {
+        featureIntroduceContent.style.opacity = '1';
+        featureIntroduceContent.style.transform = 'translateY(0)';
+        featureIntroduceBg.style.transform = 'scale(1)';
+    }
+    
+    // Show feature items when feature introduce is scrolled past
+    if (rect.bottom < windowHeight * 0.5) {
+        featureItemsContainer.classList.add('visible');
+    }
+}
+
+window.addEventListener('scroll', handleFeatureScroll);
+window.addEventListener('load', handleFeatureScroll); 
