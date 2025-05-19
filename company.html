@@ -3,42 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회사 소개 - 이안벤처스</title>
+    <title>회사 소개 - IAN</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <div class="top-language-bar">
+        <div class="language-switch">
+            <a href="company.html" class="active">한국어</a>
+            <span>|</span>
+            <a href="en/company.html">English</a>
+        </div>
+    </div>
+    <header class="main-header scrolled">
         <nav>
-            <div class="logo"><a href="index.html">이안벤처스</a></div>
+            <div class="logo"><a href="index.html">I A N</a></div>
             <div class="nav-links">
-                <a href="company.html">회사 소개</a>
+                <a href="company.html" class="active">회사 소개</a>
                 <a href="business.html">사업 영역</a>
                 <a href="partners.html">주요 거래처</a>
                 <a href="contact.html">연락처</a>
             </div>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
+        <div class="mobile-menu">
+            <a href="company.html" class="active">회사 소개</a>
+            <a href="business.html">사업 영역</a>
+            <a href="partners.html">주요 거래처</a>
+            <a href="contact.html">연락처</a>
+            <div class="language-switch">
+                <a href="company.html" class="active">한국어</a>
+                <span>|</span>
+                <a href="en/company.html">English</a>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section class="company-intro">
-            <h2>회사 소개</h2>
-            <div class="company-content">
-                <p>2025년 설립된 이안벤처스는 프리미엄 친환경 제품을 제공하는 기업입니다.</p>
-                <p>전 세계에서 찾아온 지속가능하며 사람에게 이로운 제품들을 제공하고 있습니다.</p>
-                <div class="company-values">
-                    <div class="value-item">
-                        <h3>비전</h3>
-                        <p>자연과 공존하며 성장하는 기업</p>
-                    </div>
-                    <div class="value-item">
-                        <h3>미션</h3>
-                        <p>이안벤처스 미션</p>
-                    </div>
-                    <div class="value-item">
-                        <h3>핵심가치</h3>
-                        <p>이안벤처스 핵심가치</p>
-                    </div>
+    <main class="page-content">
+        <section class="page-header">
+            <h1>회사 소개</h1>
+            <p>자연과 상생을 추구하는 이안벤처스의 이야기</p>
+        </section>
+
+        <section class="page-section">
+            <div class="company-overview">
+                <div class="company-introduce">
+                    <h2>이안벤처스, <span class="green-text">I A N</span></h2>
+                    <p>2025년 설립된 이안벤처스는 프리미엄 친환경 제품을 제공하는 기업입니다.<br>
+                    IAN 이라는 브랜드 하에 자연친화적이고 지속가능한 제품을 전세계에서 서칭 및 유통하며<br>
+                    진정성을 담은 제품을 고객에게 큐레이션하여 최고의 가치를 제공합니다.</p>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="value-introduce">
+                <h2>IAN이 생각하는 가치</h2>
+            </div>
+
+            <div class="company-values">
+                
+                <div class="value-card">
+                    <h3>자연 친화성</h3>
+                    <p>유기농, 비건, 재생 소재 등 환경에 해가 되지 않는 제품을 선택합니다.</p>
+                </div>
+                <div class="value-card">
+                    <h3>지속 가능성</h3>
+                    <p>환경을 생각하는 제품과 서비스를 통해 지속 가능한 미래를 만들어갑니다.</p>
+                </div>
+                <div class="value-card">
+                    <h3>진정성</h3>
+                    <p>단순히 트렌드를 반영하는 것이 아닌, 철학과 진심을 담은 좋은 제품을 선별합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section class="organization-chart">
+            <h2>조직도</h2>
+            <div class="chart-container">
+                <div class="chart-placeholder">
+                    <p>조직도 이미지가 준비 중입니다.</p>
                 </div>
             </div>
         </section>
@@ -55,7 +105,12 @@
                 <p>연락처 : 010-2178-1044</p>
                 <p>이메일 : contact@ianventures.net</p>
             </div>
+            <div class="copyright">
+                <p>©2025 이안벤처스. All Rights Reserved</p>
+            </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html> 

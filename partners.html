@@ -3,54 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>주요 거래처 - 이안벤처스</title>
+    <title>주요 거래처 - IAN</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <div class="top-language-bar">
+        <div class="language-switch">
+            <a href="partners.html" class="active">한국어</a>
+            <span>|</span>
+            <a href="en/partners.html">English</a>
+        </div>
+    </div>
+    <header class="main-header scrolled">
         <nav>
-            <div class="logo"><a href="index.html">이안벤처스</a></div>
+            <div class="logo"><a href="index.html">I A N</a></div>
             <div class="nav-links">
                 <a href="company.html">회사 소개</a>
                 <a href="business.html">사업 영역</a>
-                <a href="partners.html">주요 거래처</a>
+                <a href="partners.html" class="active">주요 거래처</a>
                 <a href="contact.html">연락처</a>
             </div>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
+        <div class="mobile-menu">
+            <a href="company.html">회사 소개</a>
+            <a href="business.html">사업 영역</a>
+            <a href="partners.html" class="active">주요 거래처</a>
+            <a href="contact.html">연락처</a>
+            <div class="language-switch">
+                <a href="partners.html" class="active">한국어</a>
+                <span>|</span>
+                <a href="en/partners.html">English</a>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section class="partners">
-            <h2>주요 거래처</h2>
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="images/partner1.png" alt="파트너사 1">
-                    </div>
-                    <h3>파트너사 1</h3>
-                    <p>글로벌 IT 솔루션 기업</p>
+    <main class="page-content">
+        <section class="page-header">
+            <h1>주요 거래처</h1>
+            <p>이안벤처스가 유통하는 브랜드 소개 및 실적</p>
+        </section>
+
+        <section class="page-section">
+            <div class="business-areas">
+                <div class="business-card">
+                    <div class="number">01</div>
+                    <h3>CRITIDA</h3>
+                    <p>그리스, Creta섬 소재</p>
+                    <ul class="feature-list">
+                        <li>키즈용 포함 프리미엄 올리브유</li>
+                        <li>발사믹 식초</li>
+                    </ul>
                 </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="images/partner2.png" alt="파트너사 2">
-                    </div>
-                    <h3>파트너사 2</h3>
-                    <p>금융 서비스 전문 기업</p>
+                <div class="business-card">
+                    <div class="number">02</div>
+                    <h3>La Goccia D'oro</h3>
+                    <p>이탈리아, Sicily 소재</p>
+                    <ul class="feature-list">
+                        <li>최고급 Extra Virgin 올리브유</li>
+                        <li>전통 농법 사용</li>
+                    </ul>
                 </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="images/partner3.png" alt="파트너사 3">
-                    </div>
-                    <h3>파트너사 3</h3>
-                    <p>제조업 혁신 기업</p>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="images/partner4.png" alt="파트너사 4">
-                    </div>
-                    <h3>파트너사 4</h3>
-                    <p>헬스케어 솔루션 기업</p>
+                <div class="business-card">
+                    <div class="number">03</div>
+                    <h3>Oilalà</h3>
+                    <p>이탈리아, Puglia 소재</p>
+                    <ul class="feature-list">
+                        <li>올리브유 및 발사믹 제품들</li>
+                        <li>(주)팜팩토리와 함께 유통 진행</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -67,7 +93,12 @@
                 <p>연락처 : 010-2178-1044</p>
                 <p>이메일 : contact@ianventures.net</p>
             </div>
+            <div class="copyright">
+                <p>©2025 이안벤처스. All Rights Reserved</p>
+            </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html> 
