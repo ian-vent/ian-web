@@ -219,27 +219,8 @@ mobileMenuBtn.addEventListener('click', () => {
     document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
 });
 
-// 모바일 메뉴 서브메뉴 토글
-document.querySelectorAll('.mobile-nav-with-sub > a').forEach(function(menu) {
-    menu.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        // 다른 모든 서브메뉴 닫기
-        document.querySelectorAll('.mobile-nav-with-sub.open').forEach(function(openMenu) {
-            if (openMenu !== this.parentElement) {
-                openMenu.classList.remove('open');
-            }
-        }, this);
-        
-        // 현재 클릭한 메뉴 토글
-        const parent = this.parentElement;
-        parent.classList.toggle('open');
-    });
-});
-
 // Close mobile menu when clicking a link
-mobileMenu.querySelectorAll('a:not(.mobile-nav-with-sub > a)').forEach(link => {
+mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         mobileMenuBtn.classList.remove('active');
         mobileMenu.classList.remove('active');
@@ -275,20 +256,4 @@ function handleFeatureScroll() {
 }
 
 window.addEventListener('scroll', handleFeatureScroll);
-window.addEventListener('load', handleFeatureScroll);
-
-// Feature Introduce scroll fade-in
-function handleFeatureIntroduceScroll() {
-    const featureIntroduce = document.querySelector('.feature-introduce');
-    if (!featureIntroduce) return;
-    const rect = featureIntroduce.getBoundingClientRect();
-    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-    if (rect.top < windowHeight * 0.85) {
-        featureIntroduce.classList.add('visible');
-    } else {
-        featureIntroduce.classList.remove('visible');
-    }
-}
-
-window.addEventListener('scroll', handleFeatureIntroduceScroll);
-window.addEventListener('load', handleFeatureIntroduceScroll); 
+window.addEventListener('load', handleFeatureScroll); 

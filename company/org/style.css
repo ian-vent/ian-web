@@ -84,6 +84,7 @@ nav {
 
 .nav-links a:hover {
     color: var(--secondary-color);
+    transform: scale(1.2);
 }
 
 .main-header.scrolled .nav-links a {
@@ -187,20 +188,15 @@ nav {
 }
 
 .feature-introduce {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s cubic-bezier(0.33, 1, 0.68, 1), transform 0.8s cubic-bezier(0.33, 1, 0.68, 1);
-    margin-bottom: 3rem;
+    position: relative;
+    width: 100%;
     height: 600px;
+    margin-bottom: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-}
-
-.feature-introduce.visible {
-    opacity: 1;
-    transform: translateY(0);
+    text-align: center;
+    overflow: hidden;
 }
 
 .feature-introduce-bg {
@@ -212,8 +208,8 @@ nav {
     background-image: url('images/feature-bg.jpg');
     background-size: cover;
     background-position: center;
-    filter: brightness(0.15);
-    opacity: 0.85;
+    filter: brightness(0.7);
+    opacity: 0.7;
 }
 
 .feature-introduce-content {
@@ -230,6 +226,8 @@ nav {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000,
+                 -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .feature-introduce-content p {
@@ -237,16 +235,26 @@ nav {
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000,
+                 -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-.feature-items-container,
-.feature-item,
-.feature-items-container.visible,
-.feature-item.visible {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-    visibility: visible !important;
+.feature-items-container {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.feature-items-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.features.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    transition: opacity 1.2s ease-in-out, transform 1.2s ease-out, visibility 0s;
 }
 
 .feature-card {
@@ -586,6 +594,7 @@ footer {
     color: var(--text-color);
     text-decoration: none;
     padding: 0.8rem 0 0.8rem 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     transition: var(--transition);
 }
 
@@ -1374,94 +1383,4 @@ footer {
     .main-header {
         top: 0;
     }
-}
-
-/* PC 서브메뉴 스타일 */
-.nav-with-sub {
-    position: relative;
-    display: inline-block;
-}
-
-.nav-with-sub .submenu {
-    display: none;
-    position: absolute;
-    left: 70%;
-    transform: translateX(-50%);
-    top: calc(100%);
-    background: #fff;
-    min-width: 140px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    z-index: 1000;
-    padding: 8px 0;
-    border-radius: 4px;
-}
-
-.nav-with-sub:hover .submenu {
-    display: block;
-}
-
-/* 모바일 서브메뉴 스타일 */
-.mobile-nav-with-sub {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.mobile-nav-with-sub a {
-    display: block;
-    font-size: 1.5rem;
-    color: var(--text-color);
-    text-decoration: none;
-    padding: 0.8rem 0 0.8rem 1rem;
-    transition: var(--transition);
-}
-
-.mobile-nav-with-sub a:hover {
-    color: var(--primary-color);
-    padding-left: 1.5rem;
-}
-
-.mobile-nav-with-sub .submenu {
-    display: none;
-    padding-left: 20px;
-    background: none;
-    box-shadow: none;
-}
-
-.mobile-nav-with-sub.open .submenu {
-    display: block;
-}
-
-.mobile-nav-with-sub .submenu li a {
-    font-size: 1.2rem;
-    padding: 0.6rem 0 0.6rem 1rem;
-    color: #666;
-}
-
-.mobile-nav-with-sub .submenu li a:hover {
-    color: var(--primary-color);
-    padding-left: 1.5rem;
-}
-
-.submenu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.submenu li {
-    list-style: none;
-}
-
-.submenu li a {
-    display: block;
-    padding: 6px 16px;
-    color: #333;
-    text-decoration: none;
-    font-size: 13px;
-    transition: background-color 0.3s;
-    margin: 0;
-}
-
-.submenu li a:hover {
-    background-color: #f5f5f5;
-    color: var(--secondary-color);
 } 
