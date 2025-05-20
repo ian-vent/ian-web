@@ -256,4 +256,20 @@ function handleFeatureScroll() {
 }
 
 window.addEventListener('scroll', handleFeatureScroll);
-window.addEventListener('load', handleFeatureScroll); 
+window.addEventListener('load', handleFeatureScroll);
+
+// Feature Introduce scroll fade-in
+function handleFeatureIntroduceScroll() {
+    const featureIntroduce = document.querySelector('.feature-introduce');
+    if (!featureIntroduce) return;
+    const rect = featureIntroduce.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    if (rect.top < windowHeight * 0.85) {
+        featureIntroduce.classList.add('visible');
+    } else {
+        featureIntroduce.classList.remove('visible');
+    }
+}
+
+window.addEventListener('scroll', handleFeatureIntroduceScroll);
+window.addEventListener('load', handleFeatureIntroduceScroll); 

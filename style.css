@@ -188,15 +188,20 @@ nav {
 }
 
 .feature-introduce {
-    position: relative;
-    width: 100%;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.33, 1, 0.68, 1), transform 0.8s cubic-bezier(0.33, 1, 0.68, 1);
+    margin-bottom: 3rem;
     height: 600px;
-    margin-bottom: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    overflow: hidden;
+    position: relative;
+}
+
+.feature-introduce.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .feature-introduce-bg {
@@ -208,8 +213,8 @@ nav {
     background-image: url('images/feature-bg.jpg');
     background-size: cover;
     background-position: center;
-    filter: brightness(0.7);
-    opacity: 0.7;
+    filter: brightness(0.15);
+    opacity: 0.85;
 }
 
 .feature-introduce-content {
@@ -226,8 +231,6 @@ nav {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000,
-                 -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .feature-introduce-content p {
@@ -235,26 +238,16 @@ nav {
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000,
-                 -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-.feature-items-container {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.feature-items-container.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.features.visible {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-    transition: opacity 1.2s ease-in-out, transform 1.2s ease-out, visibility 0s;
+.feature-items-container,
+.feature-item,
+.feature-items-container.visible,
+.feature-item.visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    visibility: visible !important;
 }
 
 .feature-card {
