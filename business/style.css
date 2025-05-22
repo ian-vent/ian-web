@@ -989,7 +989,7 @@ footer {
 .business-introduce {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
     width: 100%;
     min-height: 400px;
 }
@@ -1435,7 +1435,8 @@ footer {
     }
 
     .business-image {
-        height: 250px;
+        width: 50%;
+        height: 150px;
     }
 
     .business-content h3 {
