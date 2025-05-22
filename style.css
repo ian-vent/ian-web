@@ -84,6 +84,7 @@ nav {
 
 .nav-links a:hover {
     color: var(--secondary-color);
+    transform: scale(1.2);
 }
 
 .main-header.scrolled .nav-links a {
@@ -586,6 +587,7 @@ footer {
     color: var(--text-color);
     text-decoration: none;
     padding: 0.8rem 0 0.8rem 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     transition: var(--transition);
 }
 
